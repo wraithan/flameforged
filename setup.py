@@ -2,7 +2,7 @@
 
 import os
 
-from setuptools import setup
+from distutils.core import setup
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
@@ -16,7 +16,7 @@ setup(
     url='http://api.flameforged.org',
     packages=('flameforged',), 
     long_description=read('README'),
-    install_requires=('django>=1.1',),
+    requires=('django'),
     classifiers=(
           'Development Status :: 3 - Alpha',
           'Environment :: Console',
